@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+}
+
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-picker {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue;
+  width: 300px;
+  height: 280px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: 1px solid rgb(222, 239, 254);
+  overflow: hidden;
+}
+.date-picker-button {
+  margin-top: 10px;
+  width: fit-content;
+  background-color: #0af;
+  border: none;
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.date-picker-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.month-button {
+  margin: 0 10px;
+  border: none;
+  background-color: aliceblue;
+}
+
+.date-picker-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  row-gap: 25px;
+  column-gap: 10px;
+}
+
+.date-picker-grid-dates {
+  grid-template-areas:
+    "sun0 mon0 tue0 wed0 thu0 fri0 sat0"
+    "sun1 mon1 tue1 wed1 thu1 fri1 sat1"
+    "sun2 mon2 tue2 wed2 thu2 fri2 sat2"
+    "sun3 mon3 tue3 wed3 thu3 fri3 sat3"
+    "sun4 mon4 tue4 wed4 thu4 fri4 sat4"
+    "sun5 mon5 tue5 wed5 thu5 fri5 sat5";
+}
+.date,
+.date-picker-other-month-date {
+  border: none;
+  background-color: aliceblue;
+  text-align: center;
+  display: flex;
+  justify-self: center;
+  width: 25px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+}
+.date-picker-other-month-date {
+  pointer-events: none;
+  color: #777;
+}
+
+.selected {
+  background-color: #0af;
+  height: fit-content;
+  width: 25px;
+  border-radius: 10px;
+}
+
+.month-button {
+  cursor: pointer;
+  font-size: 15px;
+  align-self: center;
+}
+
+.date:hover {
+  background-color: rgb(152, 196, 218);
+  border-radius: 10px;
+}
